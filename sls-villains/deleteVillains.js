@@ -3,10 +3,12 @@ require('dotenv').config();
 const dbVillains = require('./db-villains').dbVillains;
 
 const deleteVillainsHandler = async mess => {
-    dbVillains
+    const body = JSON.parse(mess.body);
+    dbVillains.deleteOne({ name: body['name']}).exec();
+
     return ({
         status: 200,
-        body: JSON.stringify("ok")
+        body: JSON.stringify("Villains deleted successfully !")
     })
 };
 
