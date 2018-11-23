@@ -4,11 +4,11 @@ const dbVillains = require('./db-villains').dbVillains;
 
 const deleteVillainsHandler = async mess => {
     const body = JSON.parse(mess.body);
-    dbVillains.deleteOne({ name: body['name']}).exec();
+    dbVillains.create(body).exec();
 
     return ({
         status: 200,
-        body: JSON.stringify("Villains deleted successfully !")
+        body: JSON.stringify("Villains created successfully !")
     })
 };
 
