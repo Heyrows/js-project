@@ -1,0 +1,14 @@
+service: serverless-villains
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+
+functions:
+  villains:
+    handler: villains.villainsHandler
+    events:
+      - http: GET /villains
+plugins:
+- serverless-offline
