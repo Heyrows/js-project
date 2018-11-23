@@ -2,11 +2,14 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const dbVillains = require('./db-villains').dbVillains;
 
-const villainsHandler = async () => ({
-    status: 200,
-    body: JSON.stringify(await villainsGet())
-});
+const deleteVillainsHandler = async mess => {
+    dbVillains
+    return ({
+        status: 200,
+        body: JSON.stringify("ok")
+    })
+};
 
 module.exports = {
-    villainsHandler
+    deleteVillainsHandler
 };
