@@ -20,5 +20,10 @@ functions:
     events:
       - http: GET /getAllHeroes
 
+  getTarget:
+    handler: getTarget.getTargetHandler
+    events:
+      - http: POST /getTarget
+
 plugins:
 - serverless-offline
