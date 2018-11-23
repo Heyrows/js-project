@@ -6,21 +6,26 @@ provider:
 
 functions:
   findAllVillains:
-    handler: findAllVillains.villainsHandler
+    handler: findAllVillains.findAllVillainsHandler
     events:
       - http: GET /getAllVillains
+
+  createVillains:
+    handler: createVillains.createVillainsHandler
+    events:
+      - http: POST /createVillains
 
   deleteVillains:
     handler: deleteVillains.deleteVillainsHandler
     events:
     - http: POST /deleteVillains
 
-  heroes:
-    handler: findAllHeroes.heroesHandler
+  findAllHeroes:
+    handler: findAllHeroes.findAllHeroesHandler
     events:
       - http: GET /getAllHeroes
 
-  getTarget:
+  getTargetForHeroes:
     handler: getTarget.getTargetHandler
     events:
       - http: POST /getTarget
