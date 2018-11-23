@@ -10,5 +10,10 @@ functions:
     events:
       - http: GET /getAllVillains
 
+  heroes:
+    handler: findAllHeroes.heroesHandler
+    events:
+      - http: GET /getAllHeroes
+
 plugins:
 - serverless-offline
