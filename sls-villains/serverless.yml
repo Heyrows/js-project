@@ -4,11 +4,11 @@ provider:
   name: aws
   runtime: nodejs8.10
 
-
 functions:
   villains:
-    handler: villains.villainsHandler
+    handler: findAllVillains.villainsHandler
     events:
-      - http: GET /villains
+      - http: GET /getAllVillains
+
 plugins:
 - serverless-offline
