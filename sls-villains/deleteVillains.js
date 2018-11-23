@@ -3,9 +3,13 @@ require('dotenv').config();
 const dbVillains = require('./db-villains').dbVillains;
 
 const deleteVillainsHandler = async mess => {
-    dbVillains.insert(mess.body);
+    dbVillains
+    return ({
+        status: 200,
+        body: JSON.stringify("ok")
+    })
 };
 
 module.exports = {
-    villainsHandler
+    deleteVillainsHandler
 };

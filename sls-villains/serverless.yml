@@ -5,10 +5,15 @@ provider:
   runtime: nodejs8.10
 
 functions:
-  villains:
+  findAllVillains:
     handler: findAllVillains.villainsHandler
     events:
       - http: GET /getAllVillains
+
+  deleteVillains:
+    handler: deleteVillains.deleteVillainsHandler
+    events:
+    - http: POST /deleteVillains
 
   heroes:
     handler: findAllHeroes.heroesHandler
