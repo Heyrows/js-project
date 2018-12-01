@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "sls offline start --host 0.0.0.0"
+  },
   "dependencies": {
     "bson": "^4.0.0",
     "dotenv": "^4.0.0",

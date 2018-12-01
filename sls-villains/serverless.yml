@@ -8,12 +8,12 @@ functions:
   findAllVillains:
     handler: findAllVillains.findAllVillainsHandler
     events:
-      - http: GET /getAllVillains
+    - http: GET /getAllVillains
 
   createVillains:
     handler: createVillains.createVillainsHandler
     events:
-      - http: POST /createVillains
+    - http: POST /createVillains
 
   deleteVillains:
     handler: deleteVillains.deleteVillainsHandler
@@ -23,12 +23,22 @@ functions:
   findAllHeroes:
     handler: findAllHeroes.findAllHeroesHandler
     events:
-      - http: GET /getAllHeroes
+    - http: GET /getAllHeroes
 
   getTargetForHeroes:
     handler: getTarget.getTargetHandler
     events:
-      - http: POST /getTarget
+    - http: POST /getTarget
+
+  updateVillains:
+    handler: updateVillains.updateVillainHandler
+    events:
+    - http: POST /updateVillain
+
+  updateHero:
+    handler: updateHero.updateHeroHandler
+    events:
+    - http: POST /updateHero
 
 plugins:
 - serverless-offline

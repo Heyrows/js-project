@@ -3,27 +3,20 @@ require('dotenv').config();
 const dbVillains = require('./db-villains').dbVillains;
 
 
-const getTargets = () => dbVillains.find({}).exec();
+const getVillains = () => dbVillains.find({isTargeted: false}).exec();
 
 
 const getTargetHandler = async msg => {
-    const body = JSON.parse(msg.body);
+	const body = JSON.parse(msg.body);
+	const listOfAllVillains =await getVillains();
+	const listOfTargets = listOfAllVillains.find(villain => villain.x === body.x && villain.y === body.y);
 
-    const mapTargets = getTargets.map( villain => {
-        // delete the details if villains coordinates are equal to heroes coordinates
-        if ( villain.x === body['x'])
-            if ( villain.y === body['y'])
-                const details = { "name": villain.name }
-
-
-    });
-
-    return ({
-        status: 200,
-        body: JSON.stringify("x: " + body['x'] + ", y: " + body['y'])
-    })
+	return ({
+		status: 200,
+		body: JSON.stringify(listOfTargets)
+	})
 };
 
 module.exports = {
-    getTargetHandler
+	getTargetHandler
 };
