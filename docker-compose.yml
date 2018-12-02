@@ -11,15 +11,28 @@ services:
     networks:
     - projectHeroesAndVillains
 
-  hero:
-    build: ./heros
+  map:
+    build: ./map
     ports:
-      - "3200:3200"
+    - "3200:3200"
     environment:
       -PORT=3200
       -SLS=http://serverless:3100
     networks:
     - projectHeroesAndVillains
+
+  hero:
+    build: ./hero
+    ports:
+      - "3300:3300"
+    environment:
+      -PORT=3300
+      -SLS=http://serverless:3100
+      -MAP=http://map:3200
+    networks:
+    - projectHeroesAndVillains
+
+
 
   db:
     image: mongo
