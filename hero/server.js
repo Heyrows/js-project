@@ -6,7 +6,6 @@ const mapUri = 'http://127.0.0.1:3100';
 const finder = new PF.BiDijkstraFinder();
 let grid = new PF.Grid();
 /* TODO
-* arreter le hero quand il est sur le villain , tuer le villain(deleteVillain) et mettre traget.name à ''
 * generer des coordonnées de départ et verifié sur la map si le nodes (hero.x, hero.y) est walkable.
 * pour la map:
 *   refresh les positions(interval avec getall)
@@ -26,7 +25,7 @@ const target = {
 };
 
 let pathToTarget = [];
-let indexOnPath = 0;
+let indexOnPath = 1;
 
 const getTarget = () => {
 	const getTargetURI = '/getTarget';
@@ -44,11 +43,13 @@ const getTarget = () => {
 		},
 		json: true
 	}).then(body => {
-		target.name = body.name;
-		target.x = body.x;
-		target.y = body.y;
-		instantiatePathToTarget();
-		updateTarget();
+		if (body) {
+			target.name = body.name;
+			target.x = body.x;
+			target.y = body.y;
+			instantiatePathToTarget();
+			updateTarget();
+		}
 	});
 };
 
@@ -71,9 +72,24 @@ const updateTarget = () => {
 	});
 };
 
+const killTarget = () => {
+	const killTargetURI = '/deleteVillain';
+
+	requestPromise({
+		method: 'POST',
+		uri: slsUri + killTargetURI,
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: {
+			name: target.name
+		},
+		json: true
+	});
+};
+
 const updatePosition = () => {
 	const updateHeroURI = '/updateHero';
-
 	requestPromise({
 		method: 'POST',
 		uri: slsUri + updateHeroURI,
@@ -109,10 +125,17 @@ const getMap = () => {
 const move = () => {
 	if (target.name === '') {
 		getTarget();
-	}
+	} else {
+		[hero.x, hero.y] = pathToTarget[indexOnPath];
+		indexOnPath += 1;
+		updatePosition();
 
-	hero.x = pathToTarget[indexOnPath + 1];
-	indexOnPath += 1;
+		if (indexOnPath === pathToTarget.length) {
+			killTarget();
+			target.name = '';
+			indexOnPath = 1;
+		}
+	}
 };
 
 const instantiatePathToTarget = () => {
@@ -127,9 +150,9 @@ getTarget();
 setTimeout(() => {
 	setInterval(() => {
 		move();
-		updatePosition();
 		console.log(hero);
 		console.log(target);
 		console.log(indexOnPath);
-	}, 1000);
+		console.log(pathToTarget);
+	}, 5000);
 }, 5000);
