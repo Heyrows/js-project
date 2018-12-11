@@ -15,6 +15,11 @@ functions:
     events:
     - http: POST /createVillain
 
+  createHero:
+    handler: create-hero.createHeroHandler
+    events:
+    - http: POST /createHero
+
   deleteVillains:
     handler: delete-villains.deleteVillainsHandler
     events:

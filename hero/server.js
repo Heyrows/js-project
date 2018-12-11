@@ -1,8 +1,8 @@
 const requestPromise = require('request-promise');
 const PF = require('pathfinding');
 
-const slsUri = 'http://127.0.0.1:3000';
-const mapUri = 'http://127.0.0.1:3100';
+const slsUri = process.env.SLS || 'http://127.0.0.1:3000';
+const mapUri = process.env.MAP || 'http://127.0.0.1:3100';
 const finder = new PF.BiDijkstraFinder();
 let grid = new PF.Grid();
 /* TODO
@@ -14,7 +14,8 @@ let grid = new PF.Grid();
 const hero = {
 	name: 'Thor',
 	x: 0,
-	y: 0
+	y: 0,
+	target: ''
 };
 
 const target = {
@@ -47,6 +48,7 @@ const getTarget = () => {
 			target.name = body.name;
 			target.x = body.x;
 			target.y = body.y;
+			hero.target = target.name;
 			instantiatePathToTarget();
 			updateTarget();
 		}
@@ -99,11 +101,31 @@ const updatePosition = () => {
 		body: {
 			name: hero.name,
 			x: hero.x,
-			y: hero.y
+			y: hero.y,
+			target: hero.target
 		},
 		json: true
 	});
 };
+
+const firstContact = () => {
+	const createHeroURI = '/createHero';
+	requestPromise({
+		method: 'POST',
+		uri: slsUri + createHeroURI,
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: {
+			name: hero.name,
+			x: hero.x,
+			y: hero.y,
+			target: hero.target
+		},
+		json: true
+	});
+};
+
 
 const getMap = () => {
 	const getMapURI = '/getMap';
@@ -133,6 +155,7 @@ const move = () => {
 		if (indexOnPath === pathToTarget.length) {
 			killTarget();
 			target.name = '';
+			hero.target = '';
 			indexOnPath = 1;
 		}
 	}
@@ -144,15 +167,13 @@ const instantiatePathToTarget = () => {
 	grid = gridBackup;
 };
 
-getMap();
-getTarget();
+setTimeout(() => {
+	getMap();
+	firstContact();
+}, 10000);
 
 setTimeout(() => {
 	setInterval(() => {
 		move();
-		console.log(hero);
-		console.log(target);
-		console.log(indexOnPath);
-		console.log(pathToTarget);
-	}, 5000);
-}, 5000);
+	}, 1000);
+}, 20000);

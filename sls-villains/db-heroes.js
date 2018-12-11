@@ -5,7 +5,7 @@ const db = mongoose.createConnection(mongoDB);
 
 const {Schema} = mongoose;
 
-const heroesSchema = new Schema({nom: String, x: Number, y: Number});
+const heroesSchema = new Schema({name: String, x: Number, y: Number, target: String});
 
 const dbHeroes = db.model('heroes', heroesSchema);
 

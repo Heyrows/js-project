@@ -4,7 +4,8 @@ services:
     build: ./sls-villains
     ports:
     - "3100:3000"
-    dns: 0.0.0.0
+    links:
+    - db
     environment:
     - DB=mongodb://db:27017/db-HeroesAndVillains
     - PORT=3100
@@ -16,8 +17,8 @@ services:
     ports:
     - "3200:3200"
     environment:
-      -PORT=3200
-      -SLS=http://serverless:3100
+      - PORT=3200
+      - SLS=http://serverless:3000
     networks:
     - projectHeroesAndVillains
 
@@ -26,18 +27,25 @@ services:
     ports:
       - "3300:3300"
     environment:
-      -PORT=3300
-      -SLS=http://serverless:3100
-      -MAP=http://map:3200
+      - PORT=3300
+      - SLS=http://serverless:3000
+      - MAP=http://map:3200
     networks:
     - projectHeroesAndVillains
 
-
+  interface:
+    build: ./interface
+    ports:
+      - "4200:4200"
+    environment:
+      - SLS=http://serverless:3000
+    networks:
+    - projectHeroesAndVillains
 
   db:
     image: mongo
     ports:
-    - "27027:27017"
+    - "27017:27017"
     networks:
     - projectHeroesAndVillains
 

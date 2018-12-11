@@ -17,11 +17,10 @@
     "serverless-offline": "^3.31.3"
   },
   "xo": {
-    " esnext ": true,
-    " space ": 2,
-    " rules ": {
-      "max - len ": [
-        " error ",
+    "space": 2,
+    "rules": {
+      "max-len": [
+        "error",
         80,
         2
       ]
