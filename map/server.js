@@ -7,8 +7,16 @@ const gridHeight = 51;
 const gridWidth = 51;
 const grid = new PF.Grid(gridWidth, gridHeight);
 let listOfAllVillains = [];
-const listOfVillainNames = ['Batman', 'Robin', 'Mr Penguin', 'Zoom', 'Captain Connard', 'La Mouette',
-								'Hanouna', 'Lepen', 'Le Sida', 'Darren Sugg'];
+const listOfVillainNames = ['Batman',
+	'Robin',
+	'Mr Penguin',
+	'Zoom',
+	'Captain Connard',
+	'La Mouette',
+	'Hanouna',
+	'Lepen',
+	'Le Sida',
+	'Darren Sugg'];
 
 /* Desactiver des parties de la map ex: obstacle dans la ville
 grid.setWalkableAt(0, 1, false); */
@@ -21,8 +29,8 @@ app.get('/getMap', (req, res) => {
 		.send(JSON.stringify(grid));
 });
 
-const createVillain = (name) => {
-	const {x,y} = generateCoordinate();
+const createVillain = name => {
+	const {x, y} = generateCoordinate();
 	const createVillainURI = '/createVillain';
 	requestPromise({
 		method: 'POST',
@@ -31,9 +39,9 @@ const createVillain = (name) => {
 			'Content-Type': 'application/json'
 		},
 		body: {
-			name: name,
-			x: x,
-			y: y,
+			name,
+			x,
+			y,
 			isTargeted: false
 		},
 		json: true
@@ -49,7 +57,7 @@ const getAllVillains = () => {
 			'Content-Type': 'application/json'
 		}
 	}).then(res => {
-		if(res) {
+		if (res) {
 			listOfAllVillains = JSON.parse(res);
 		}
 		verifyVillains();
@@ -57,7 +65,7 @@ const getAllVillains = () => {
 };
 
 const verifyVillains = () => {
-	if (listOfAllVillains.length > 0){
+	if (listOfAllVillains.length > 0) {
 		const listOfExistingVillainNames = listOfAllVillains.map(villain => villain.name);
 		const listOfNotExistingVillain = listOfVillainNames.filter(name => !(listOfExistingVillainNames.includes(name)));
 		listOfNotExistingVillain.forEach(name => createVillain(name));
@@ -69,17 +77,17 @@ const verifyVillains = () => {
 const generateCoordinate = () => {
 	let x = Math.floor(Math.random() * gridWidth);
 	let y = Math.floor(Math.random() * gridHeight);
-	while(!grid.nodes[y][x].walkable){
+	while (!grid.nodes[y][x].walkable) {
 		x = Math.floor(Math.random() * gridWidth);
 		y = Math.floor(Math.random() * gridHeight);
 	}
 	return {x, y};
 };
 
-setTimeout( () => {
-	setInterval( () => {
+setTimeout(() => {
+	setInterval(() => {
 		getAllVillains();
 	}, 10000);
 }, 20000);
 
-app.listen( process.env.PORT || 3100);
+app.listen(process.env.PORT || 3100);

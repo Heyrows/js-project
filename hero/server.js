@@ -5,12 +5,7 @@ const slsUri = process.env.SLS || 'http://127.0.0.1:3000';
 const mapUri = process.env.MAP || 'http://127.0.0.1:3100';
 const finder = new PF.BiDijkstraFinder();
 let grid = new PF.Grid();
-/* TODO
-* generer des coordonnées de départ et verifié sur la map si le nodes (hero.x, hero.y) est walkable.
-* pour la map:
-*   refresh les positions(interval avec getall)
-*   affichage des resultats
-* */
+
 const hero = {
 	name: 'Thor',
 	x: 0,
@@ -125,7 +120,6 @@ const firstContact = () => {
 		json: true
 	});
 };
-
 
 const getMap = () => {
 	const getMapURI = '/getMap';

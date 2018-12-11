@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e83d9c42-6e08-4ace-93ad-3e8fd0202710" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/interface/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sls-villains/create-hero.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hero/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/hero/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/map/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/map/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/map/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sls-villains/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/sls-villains/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sls-villains/db-heroes.js" beforeDir="false" afterPath="$PROJECT_DIR$/sls-villains/db-heroes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sls-villains/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sls-villains/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sls-villains/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sls-villains/serverless.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sls-villains/update-hero.js" beforeDir="false" afterPath="$PROJECT_DIR$/sls-villains/update-hero.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -96,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/map/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+            <state relative-caret-position="270">
+              <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -114,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hero/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="176" column="8" lean-forward="true" selection-start-line="176" selection-start-column="8" selection-end-line="176" selection-end-column="8" />
+            <state relative-caret-position="187">
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -375,12 +364,12 @@
       <workItem from="1544187236734" duration="13406000" />
       <workItem from="1544268544645" duration="11642000" />
       <workItem from="1544286076514" duration="4991000" />
-      <workItem from="1544295868307" duration="16970000" />
+      <workItem from="1544295868307" duration="17283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132813000" />
+    <option name="totallyTimeSpent" value="133126000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -398,7 +387,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49834764" visible="true" weight="0.3602837" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49834764" visible="true" weight="0.21276596" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50165236" side_tool="true" weight="0.40141845" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -643,15 +632,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/map/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        <state relative-caret-position="270">
+          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hero/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="176" column="8" lean-forward="true" selection-start-line="176" selection-start-column="8" selection-end-line="176" selection-end-column="8" />
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
         </state>
       </provider>
     </entry>
