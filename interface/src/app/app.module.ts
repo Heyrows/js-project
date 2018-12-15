@@ -4,15 +4,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {RouterModule, Routes} from "@angular/router";
+import { DisplayMapComponent } from './Component/display-map/display-map.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent},
+  { path: '', component: DisplayMapComponent},
 ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DisplayMapComponent
   ],
   imports: [
     BrowserModule,

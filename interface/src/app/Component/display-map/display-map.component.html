@@ -1,0 +1,28 @@
+<div class="nav-side-menu">
+  <div class="brand">Js-Project</div>
+  <div class="menu-list">
+
+    <ul id="menu-content" class="menu-content collapse out">
+      <li>
+        <span class="white-text">Villains Captured : {{villainsCapturedCount}}</span>
+      </li>
+      <li *ngFor="let hero of listOfHeroes">
+        <span class="blue-text"> {{hero.name}} </span> -> <span class="red-text">{{hero.target}}</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="elements">
+  <img class="img-map" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Place_Charles-de-Gaulle_-_OSM_2016.svg/700px-Place_Charles-de-Gaulle_-_OSM_2016.svg.png">
+
+  <div  *ngFor="let villain of listOfVillains" [ngStyle]="{'left':((villain.x/51)*100).toString() + '%',
+ 'top': ((villain.y/51)*100).toString() + '%', 'position': 'absolute'}">
+    <p class="villain">{{villain.name}}</p>
+  </div>
+
+  <div *ngFor="let hero of listOfHeroes" [ngStyle]="{'left':((hero.x/50)*100).toString() + '%',
+ 'top': ((hero.y/50)*100).toString() + '%', 'position': 'absolute'}">
+    <p class="hero">{{hero.name}}</p>
+  </div>
+</div>

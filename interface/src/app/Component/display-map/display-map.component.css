@@ -1,0 +1,104 @@
+.img-map{
+  width:99%;
+  height:99%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.villain{
+  color: red;
+  font-size: 12px;
+  background-color: black;
+  border: 1px solid red;
+  margin: 0 2px 0 2px;
+  padding: 5px;
+}
+
+.hero{
+  color: blue;
+  font-size: 12px;
+  background-color: deepskyblue;
+  border: 1px solid blue;
+  margin: 0 2px 0 2px;
+  padding: 5px;
+}
+
+.Button {
+  height: 50px;
+  position: relative;
+  background: #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.nav-side-menu {
+  overflow: auto;
+  font-family: verdana;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: #2e353d;
+  position: fixed;
+  top: 0;
+  padding-left: 0;
+  height: 100%;
+  left: 0;
+  width: 14%;
+  color: #e1ffff;
+}
+
+.nav-side-menu .brand {
+  background-color: #23282e;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+.nav-side-menu .toggle-btn {
+  display: none;
+}
+.nav-side-menu ul,
+.nav-side-menu li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 35px;
+  cursor: context-menu;
+}
+
+.nav-side-menu li {
+  padding-left: 0px;
+  border-left: 3px solid #84a3c6;
+  border-bottom: 1px solid #23282e;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.elements {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 86%;
+  position: absolute;
+}
+
+.red-text{
+  color: red;
+}
+
+.blue-text{
+  color:deepskyblue;
+  padding-left: 10px;
+}
+
+.white-text{
+  color:white;
+  padding-left: 10px;
+}

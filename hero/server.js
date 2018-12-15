@@ -7,167 +7,167 @@ const finder = new PF.BiDijkstraFinder();
 let grid = new PF.Grid();
 
 const hero = {
-	name: 'Thor',
-	x: 0,
-	y: 0,
-	target: ''
+  name: process.env.NAME,
+  x: process.env.X,
+  y: process.env.Y,
+  target: ''
 };
 
 const target = {
-	name: '',
-	x: 0,
-	y: 0,
-	isTargeted: true
+  name: '',
+  x: 0,
+  y: 0,
+  isTargeted: true
 };
 
 let pathToTarget = [];
 let indexOnPath = 1;
 
 const getTarget = () => {
-	const getTargetURI = '/getTarget';
+  const getTargetURI = '/getTarget';
 
-	requestPromise({
-		method: 'POST',
-		uri: slsUri + getTargetURI,
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: {
-			name: hero.name,
-			x: hero.x,
-			y: hero.y
-		},
-		json: true
-	}).then(body => {
-		if (body) {
-			target.name = body.name;
-			target.x = body.x;
-			target.y = body.y;
-			hero.target = target.name;
-			instantiatePathToTarget();
-			updateTarget();
-		}
-	});
+  requestPromise({
+    method: 'POST',
+    uri: slsUri + getTargetURI,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: {
+      name: hero.name,
+      x: hero.x,
+      y: hero.y
+    },
+    json: true
+  }).then(body => {
+    if (body) {
+      target.name = body.name;
+      target.x = body.x;
+      target.y = body.y;
+      hero.target = target.name;
+      instantiatePathToTarget();
+      updateTarget();
+    }
+  });
 };
 
 const updateTarget = () => {
-	const updateVillainURI = '/updateVillain';
+  const updateVillainURI = '/updateVillain';
 
-	requestPromise({
-		method: 'POST',
-		uri: slsUri + updateVillainURI,
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: {
-			name: target.name,
-			x: target.x,
-			y: target.y,
-			isTargeted: target.isTargeted
-		},
-		json: true
-	});
+  requestPromise({
+    method: 'POST',
+    uri: slsUri + updateVillainURI,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: {
+      name: target.name,
+      x: target.x,
+      y: target.y,
+      isTargeted: target.isTargeted
+    },
+    json: true
+  });
 };
 
 const killTarget = () => {
-	const killTargetURI = '/deleteVillain';
+  const killTargetURI = '/deleteVillain';
 
-	requestPromise({
-		method: 'POST',
-		uri: slsUri + killTargetURI,
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: {
-			name: target.name
-		},
-		json: true
-	});
+  requestPromise({
+    method: 'POST',
+    uri: slsUri + killTargetURI,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: {
+      name: target.name
+    },
+    json: true
+  });
 };
 
 const updatePosition = () => {
-	const updateHeroURI = '/updateHero';
-	requestPromise({
-		method: 'POST',
-		uri: slsUri + updateHeroURI,
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: {
-			name: hero.name,
-			x: hero.x,
-			y: hero.y,
-			target: hero.target
-		},
-		json: true
-	});
+  const updateHeroURI = '/updateHero';
+  requestPromise({
+    method: 'POST',
+    uri: slsUri + updateHeroURI,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: {
+      name: hero.name,
+      x: hero.x,
+      y: hero.y,
+      target: hero.target
+    },
+    json: true
+  });
 };
 
 const firstContact = () => {
-	const createHeroURI = '/createHero';
-	requestPromise({
-		method: 'POST',
-		uri: slsUri + createHeroURI,
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: {
-			name: hero.name,
-			x: hero.x,
-			y: hero.y,
-			target: hero.target
-		},
-		json: true
-	});
+  const createHeroURI = '/createHero';
+  requestPromise({
+    method: 'POST',
+    uri: slsUri + createHeroURI,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: {
+      name: hero.name,
+      x: hero.x,
+      y: hero.y,
+      target: hero.target
+    },
+    json: true
+  });
 };
 
 const getMap = () => {
-	const getMapURI = '/getMap';
+  const getMapURI = '/getMap';
 
-	requestPromise({
-		method: 'GET',
-		uri: mapUri + getMapURI,
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	}).then(resp => {
-		const body = JSON.parse(resp);
-		grid.width = body.width;
-		grid.height = body.height;
-		grid.nodes = body.nodes;
-	});
+  requestPromise({
+    method: 'GET',
+    uri: mapUri + getMapURI,
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(resp => {
+    const body = JSON.parse(resp);
+    grid.width = body.width;
+    grid.height = body.height;
+    grid.nodes = body.nodes;
+  });
 };
 
 const move = () => {
-	if (target.name === '') {
-		getTarget();
-	} else {
-		[hero.x, hero.y] = pathToTarget[indexOnPath];
-		indexOnPath += 1;
-		updatePosition();
+  if (target.name === '') {
+    getTarget();
+  } else {
+    [hero.x, hero.y] = pathToTarget[indexOnPath];
+    indexOnPath += 1;
+    updatePosition();
 
-		if (indexOnPath === pathToTarget.length) {
-			killTarget();
-			target.name = '';
-			hero.target = '';
-			indexOnPath = 1;
-		}
-	}
+    if (indexOnPath === pathToTarget.length) {
+      killTarget();
+      target.name = '';
+      hero.target = '';
+      indexOnPath = 1;
+    }
+  }
 };
 
 const instantiatePathToTarget = () => {
-	const gridBackup = grid.clone();
-	pathToTarget = finder.findPath(hero.x, hero.y, target.x, target.y, grid);
-	grid = gridBackup;
+  const gridBackup = grid.clone();
+  pathToTarget = finder.findPath(hero.x, hero.y, target.x, target.y, grid);
+  grid = gridBackup;
 };
 
 setTimeout(() => {
-	getMap();
-	firstContact();
-}, 10000);
+  getMap();
+  firstContact();
+}, 15000);
 
 setTimeout(() => {
-	setInterval(() => {
-		move();
-	}, 1000);
+  setInterval(() => {
+    move();
+  }, 1000);
 }, 20000);

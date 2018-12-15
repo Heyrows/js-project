@@ -30,6 +30,23 @@ services:
       - PORT=3300
       - SLS=http://serverless:3000
       - MAP=http://map:3200
+      - NAME=Thor
+      - X=0
+      - Y=0
+    networks:
+    - projectHeroesAndVillains
+
+  hero2:
+    build: ./hero
+    ports:
+    - "3500:3500"
+    environment:
+    - PORT=3500
+    - SLS=http://serverless:3000
+    - MAP=http://map:3200
+    - NAME=Star-Lord
+    - X=50
+    - Y=50
     networks:
     - projectHeroesAndVillains
 
