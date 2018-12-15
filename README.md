@@ -20,7 +20,7 @@ Use the following instructions to download and run the project
 
 ```
 git clone https://github.com/Heyrows/js-project.git 
-cd js-project.git
+cd js-project
 docker-compose up --build
 ```
 

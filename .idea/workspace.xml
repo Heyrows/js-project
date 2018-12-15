@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e83d9c42-6e08-4ace-93ad-3e8fd0202710" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -67,7 +67,7 @@
           <entry key="html" value="1516" />
           <entry key="js" value="11946" />
           <entry key="json" value="105" />
-          <entry key="md" value="920" />
+          <entry key="md" value="1367" />
           <entry key="ts" value="1307" />
           <entry key="txt" value="11" />
           <entry key="yml" value="1072" />
@@ -80,7 +80,7 @@
           <entry key="HTML" value="1514" />
           <entry key="JSON" value="105" />
           <entry key="JavaScript" value="11948" />
-          <entry key="Markdown" value="756" />
+          <entry key="Markdown" value="1203" />
           <entry key="PLAIN_TEXT" value="196" />
           <entry key="TypeScript" value="1307" />
           <entry key="YAML" value="1072" />
@@ -108,19 +108,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="191">
-                <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+              <first_editor relative-caret-position="374">
+                <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -259,8 +259,8 @@
         <option value="$PROJECT_DIR$/map/server.js" />
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/hero/package.json" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -291,7 +291,7 @@
       <path value="$PROJECT_DIR$/sls-villains/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -396,12 +396,12 @@
       <workItem from="1544887002745" duration="1204000" />
       <workItem from="1544888235392" duration="47000" />
       <workItem from="1544888308379" duration="5119000" />
-      <workItem from="1544894894034" duration="295000" />
+      <workItem from="1544894894034" duration="871000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167358000" />
+    <option name="totallyTimeSpent" value="167934000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -416,7 +416,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992908" visible="true" weight="0.24785195" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992908" visible="true" weight="0.24785195" />
       <window_info id="Structure" order="1" sideWeight="0.50070924" side_tool="true" weight="0.24785195" />
       <window_info id="Favorites" order="2" sideWeight="0.50070924" side_tool="true" weight="0.24785195" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -428,7 +428,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4976867" visible="true" weight="0.27234042" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4976867" visible="true" weight="0.30496454" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50165236" side_tool="true" weight="0.14468086" />
       <window_info anchor="bottom" id="TypeScript" order="11" sideWeight="0.49834764" visible="true" weight="0.14468086" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -704,17 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="191">
-            <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/map/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -735,6 +724,17 @@
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="374">
+            <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
