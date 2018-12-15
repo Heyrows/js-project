@@ -29,6 +29,20 @@ Once every services is running, go on
 http://192.168.99.100:4200/
 `
 
+### Possible Errors
+
+* If you get an error while the services were building, you may need to restart your computer.
+
+* If the database goes down due to too much connections, run the following instruction : 
+```
+docker-compose down
+docker volume prune
+```
+Then run :
+``
+docker-compose up --build
+``
+
 ## Authors
 
 * **CAHUET Amaury** (https://github.com/Heyrows)
