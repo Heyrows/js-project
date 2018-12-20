@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e83d9c42-6e08-4ace-93ad-3e8fd0202710" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/src/assets/map2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/src/assets/map.png" beforeDir="false" afterPath="$PROJECT_DIR$/interface/src/assets/map.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -104,8 +106,8 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="4" />
-          <entry key="css" value="1" />
-          <entry key="html" value="1" />
+          <entry key="css" value="2" />
+          <entry key="html" value="2" />
           <entry key="js" value="5" />
           <entry key="json" value="15" />
           <entry key="md" value="4" />
@@ -116,9 +118,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
+          <entry key="CSS" value="2" />
           <entry key="Dockerfile" value="4" />
-          <entry key="HTML" value="1" />
+          <entry key="HTML" value="2" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="12" />
           <entry key="JavaScript" value="5" />
@@ -130,12 +132,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="html" value="12" />
           <entry key="js" value="86" />
           <entry key="yml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="HTML" value="12" />
           <entry key="JavaScript" value="86" />
           <entry key="YAML" value="13" />
         </counts>
@@ -170,10 +174,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
+            <state relative-caret-position="782">
               <caret line="46" column="18" lean-forward="true" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
             </state>
           </provider>
@@ -203,10 +207,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/map/package.json">
+        <entry file="file://$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="374">
+              <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -222,11 +235,6 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hero/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/map/package-lock.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -291,7 +299,6 @@
         <option value="$PROJECT_DIR$/sls-villains/find-all-villains.js" />
         <option value="$PROJECT_DIR$/hero/server.js" />
         <option value="$PROJECT_DIR$/sls-villains/find-all-heroes.js" />
-        <option value="$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.html" />
         <option value="$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.ts" />
         <option value="$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.css" />
         <option value="$PROJECT_DIR$/README" />
@@ -300,6 +307,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/map/server.js" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.html" />
       </list>
     </option>
   </component>
@@ -357,7 +365,37 @@
               <item name="js-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="js-project" type="462c0819:PsiDirectoryNode" />
               <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="e2e" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-project" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-project" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-project" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-project" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Component" type="462c0819:PsiDirectoryNode" />
+              <item name="display-map" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="js-project" type="b2602c69:ProjectViewProjectNode" />
@@ -392,17 +430,18 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Julien\js-project\interface\src\assets" />
+      <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo\hero" />
+      <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo\heros" />
+      <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo\sls-villains" />
+      <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo" />
       <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo\interface" />
       <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo\map" />
       <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo\heros" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo\hero" />
-      <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo\heros" />
-      <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo\sls-villains" />
-      <recent name="C:\Users\Amaury\Desktop\Cours\JS\projet_cahuet_bravo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -458,12 +497,12 @@
       <workItem from="1544888308379" duration="5119000" />
       <workItem from="1544894894034" duration="871000" />
       <workItem from="1545039876688" duration="187000" />
-      <workItem from="1545289601091" duration="1174000" />
+      <workItem from="1545289601091" duration="1529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169295000" />
+    <option name="totallyTimeSpent" value="169650000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -611,21 +650,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.md" />
-    <entry file="file://$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interface/src/app/app.component.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -710,7 +735,7 @@
     <entry file="file://$PROJECT_DIR$/interface/src/tslint.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/src/assets/map.png">
+    <entry file="file://$PROJECT_DIR$/interface/src/assets/map2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/interface/src/test.ts">
@@ -779,8 +804,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
+        <state relative-caret-position="782">
           <caret line="46" column="18" lean-forward="true" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/src/app/Component/display-map/display-map.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
         </state>
       </provider>
     </entry>
