@@ -8,16 +8,16 @@ const gridWidth = 51;
 const grid = new PF.Grid(gridWidth, gridHeight);
 let listOfAllVillains = [];
 const listOfVillainNames = [
-  'Mr Penguin',
-  'Captain Connard',
-  'Hanouna',
-  'Lepen',
-  'Le Sida',
-  'Darren Sugg',
-  'Sylvain',
-  'Joker',
-  'La Cohérence',
-  'VolSesGrandsMorts'
+  'Marcel',
+  'Jean-Claude',
+  'Bernadette',
+  'Claudine',
+  'Michel',
+  'Jean-Luc',
+  'Didier',
+  'Frederique',
+  'Gertrude',
+  'Maxime'
 ];
 
 const app = express();
