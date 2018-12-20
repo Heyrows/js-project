@@ -30,7 +30,7 @@ services:
       - PORT=3300
       - SLS=http://serverless:3000
       - MAP=http://map:3200
-      - NAME=Thor
+      - NAME=Macron
       - X=0
       - Y=0
     networks:
@@ -44,7 +44,7 @@ services:
     - PORT=3500
     - SLS=http://serverless:3000
     - MAP=http://map:3200
-    - NAME=Star-Lord
+    - NAME=Benalla
     - X=50
     - Y=50
     networks:
