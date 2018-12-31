@@ -16,11 +16,25 @@ To run the project you need the install these first:
 
 ### Installing
 
-Use the following instructions to download and run the project
+Use the following instructions to download, install and run the project
 
+
+Download :
 ```
 git clone https://github.com/Heyrows/js-project.git 
 cd js-project
+```
+
+Install :
+```
+cd ./hero && npm i && cd ../
+cd ./sls-villains && npm i && cd ../
+cd ./map && npm i && cd ../
+cd ./interface && npm i && cd ../
+```
+
+Run :
+```
 docker-compose up --build
 ```
 
@@ -33,7 +47,7 @@ http://192.168.99.100:4200/
 
 * If you get an error while the services were building, you may need to restart your computer.
 
-* If the database goes down due to too much connections, run the following instruction : 
+* If the database goes down, run the following instruction : 
 ```
 docker-compose down
 docker volume prune
