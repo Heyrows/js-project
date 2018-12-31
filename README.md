@@ -50,6 +50,7 @@ http://192.168.99.100:4200/
 * If the database goes down, run the following instruction : 
 ```
 docker-compose down
+docker system prune
 docker volume prune
 ```
 Then run :
